@@ -1,0 +1,58 @@
+ol{
+   background-color: yellow;
+}
+
+ol li:nth-child(even){
+   color: green;
+}
+
+ol li:nth-child(odd){
+   text-transform: uppercase;
+}
+
+h1,h3 {
+   color: red;
+}
+
+h1 em{
+   font-size: 40px;
+   border-style: solid;
+   border-width: 1px;
+   border-color:black ;
+}
+
+li{
+   font-size: 20px;
+}
+
+li em{
+   font-weight: bold;
+}
+
+div ul li:nth-child(-n+3){
+   color: blue;
+}
+
+#Trybe:hover{
+   background-color: green ;
+}
+
+
+#DevDocs:hover{
+   background-color: yellow ;
+}
+
+
+#MDN:hover{
+   background-color: black ;
+}
+
+
+#W3S:hover{
+   background-color: green;
+}
+
+
+#StackOverflow:hover{
+   background-color: orange ;
+}
