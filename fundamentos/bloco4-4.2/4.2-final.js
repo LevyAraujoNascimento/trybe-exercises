@@ -2,21 +2,20 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let soma = 0 ;
 let maior = 0;
 let impares = 0;
-let menor = 0;
+let menor = numbers[0];
 let novoArray = [];
 
 /! Parte 1  / 
-for(let i = 0 ; i < numbers.length ; i++){
-    let x = numbers[i]%2; 
+for(let i = 0 ; i < numbers.length ; i++){ 
     console.log(numbers[i]);
     soma = soma + numbers[i];
     if(numbers[i]>maior){
         maior = numbers[i];
     }
-    if(x !== 0){
+    if(numbers[i]%2 !== 0){
         impares++;
     }
-    if(numbers[i]<menor){
+    if(numbers[i] < menor){
         menor = numbers[i];
     }
 }
