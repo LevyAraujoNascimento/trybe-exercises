@@ -64,6 +64,10 @@
       document.getElementsByClassName("title")[0].innerText = "Exercício - JavaScript";
       //5º 
       document.querySelector("p").style.textTransform = "uppercase";
+      //6º
+      for(let i = 0 ; i < document.getElementsByTagName("p").length ; i++){
+      console.log(document.getElementsByTagName("p")[i].innerText);
+      }
     </script>
   </body>
 </html>
