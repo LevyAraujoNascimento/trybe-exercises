@@ -36,14 +36,24 @@ function alterar(){
 
 myWebpage.addEventListener("dblclick",redireciona);
 
-function redireciona(evento){
-    let frase = evento.target;
-    let texto = frase.innerText;
-    frase.innerText = "Tome";
+function redireciona(){
+    window.location.replace('https://levyaraujonascimento.github.io/');
+    
 }
 
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+myWebpage.addEventListener("mouseover",sobre);
+myWebpage.addEventListener("mouseleave",fora);
+
+function sobre(){
+    myWebpage.style.color = "red";
+}
+
+function fora(){
+    myWebpage.style.color = "white";
+}
 
 // Segue abaixo um exemplo do uso de event.target:
 
