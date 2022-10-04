@@ -1,9 +1,18 @@
-let input = document.getElementById('input');
+let inputFundo = document.getElementById('inputFundo');
+let inputTexto = document.getElementById('inputTexto');
 let titulo = document.getElementById('titulo');
+let corpo = document.getElementById('corpo');
+let loremIpsum = document.getElementById('loremIpsum');
 
-input.addEventListener('input',mudarFundo);
+inputFundo.addEventListener('input',mudarFundo);
+inputTexto.addEventListener('input',mudarCorTexto);
 
 function mudarFundo(evento){
     let texto = evento.target.value;
-    titulo.style.color = texto;
+    corpo.style.backgroundColor = texto;
+}
+
+function mudarCorTexto(evento){
+    let texto = evento.target.value;
+    loremIpsum.style.color = texto;
 }
