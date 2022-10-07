@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" minlength="10" maxlength="40">
+        <br><br>
+        <label for="">Email: </label>
+            <input type="text" name="email" id="email" minlength="10" maxlength="50"> 
+        <br><br>
+        <input type="radio" name="resposta" id="op1">Cidade
+        <input type="radio" name="resposta" id="op2">Campo
+        <input type="radio" name="resposta" id="op3">Praia
+        <input type="radio" name="resposta" id="op4">Montanhas
+        <br><br>
+        <label for="subjetiva">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? </label><br><br>    
+            <textarea name="subjetiva" id="subjetiva" cols="50" rows="20" maxlength="500"></textarea>
+        <br><br>
+        <label for="data">Melhor dara para viagem: </label>
+            <input type="date" id="data">  
+        <br><br>
+        <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <input type="checkbox" id="oportunidades"> 
+        <br><br>
+        <label for="termos">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            <input type="checkbox" id="termos">     
+        
+              
+    </fieldset>
+    <br><br>
+    <input type="submit" id="enviar" value="Enviar">
+    
+</body>
+</html>
