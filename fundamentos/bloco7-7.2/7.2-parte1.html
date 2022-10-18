@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    let valor1 = document.getElementById('value1');
+    let valor2 = document.getElementById('value2');
+    let result = document.getElementById('result');
+    const verificar = (valor1,valor2) => {
+        if(typeof(valor1) ==! 'number' || typeof(valor2) ==! 'number'){
+            throw new Error("Insira um numero, por favor.");
+        }
+    }
+    const sum = (valor1,valor2) => {
+        try{
+            verificar(valor1,valor2);
+            return valor1 + valor2;
+        }catch(error){
+            return error.message;
+        }
+    }
+    function resposta(){
+        let v1 = valor1.value;
+        let v2 = valor2.value;
+        result.innerText = `${sum(v1,v2)}`;
+        
+    }
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', resposta);
+    }
+  </script>
+</body>
+</html>
