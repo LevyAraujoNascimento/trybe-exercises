@@ -15,28 +15,25 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
-    let valor1 = document.getElementById('value1');
-    let valor2 = document.getElementById('value2');
-    let result = document.getElementById('result');
-    const verificar = (valor1,valor2) => {
-        if(typeof(valor1) ==! 'number' || typeof(valor2) ==! 'number'){
-            throw new Error("Insira um numero, por favor.");
-        }
+    
+    const verificar = (v1,v2) => {
+      if(isNaN(v1) === true || isNaN(v2) === true){
+        throw new Error("Insira um numero");
+      }
     }
-    const sum = (valor1,valor2) => {
-        try{
-            verificar(valor1,valor2);
-            return valor1 + valor2;
-        }catch(error){
-            return error.message;
-        }
+    
+    const resposta = () => {
+      let v1 = document.getElementById("value1").value;
+      let v2 = document.getElementById("value2").value;
+
+      try {
+        verificar(v1,v2);
+        document.getElementById("result").innerHTML = `${Number(v1)+Number(v2)}`;
+      } catch (error) {
+        document.getElementById("result").innerText = error.message;
+      }
     }
-    function resposta(){
-        let v1 = valor1.value;
-        let v2 = valor2.value;
-        result.innerText = `${sum(v1,v2)}`;
-        
-    }
+
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', resposta);
