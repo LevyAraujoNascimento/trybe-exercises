@@ -6,10 +6,10 @@ const people = [
     { name: 'Bruna', age: 19 },
   ];
   
-  people.sort((a,b) => a.age > b.age ? 1 : -1);
+  people.sort((a,b) => a.age - b.age );
   
   console.log(people);
 
-  people.sort((a,b) => a.name > b.name ? 1 : -1);
+  people.sort((a,b) => a.name - b.name );
   
   console.log(people);
